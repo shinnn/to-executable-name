@@ -9,7 +9,7 @@
 Append `.exe` to a given string if the program is running on a [Windows](http://windows.microsoft.com/) environment
 
 ```javascript
-var toExecutableName = require('to-executable-name');
+const toExecutableName = require('to-executable-name');
 
 // On Windows
 toExecutableName('iojs'); //=> 'iojs.exe'
@@ -29,7 +29,7 @@ npm install to-executable-name
 ## API
 
 ```javascript
-var toExecutableName = require('to-executable-name');
+const toExecutableName = require('to-executable-name');
 ```
 
 ### toExecutableName(*binName*)
