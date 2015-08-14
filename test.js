@@ -1,4 +1,4 @@
-'use strict';
+'use strong';
 
 const test = require('tape');
 const toExecutableName = require('.');
@@ -26,13 +26,13 @@ test('toExecutableName', t => {
 
   t.throws(
     () => toExecutableName(['bin']),
-    /TypeError.* is not a string. The first argument to to-executable-name must be a string\./,
+    /TypeError.* is not a string\. The first argument to to-executable-name must be a string\./,
     'should throw a type error when it takes a non-string argument.'
   );
 
   t.throws(
     () => toExecutableName(),
-    /TypeError.* is not a string. The first argument to to-executable-name must be a string\./,
+    /TypeError.* is not a string\. The first argument to to-executable-name must be a string\./,
     'should throw a type error when it takes no arguments.'
   );
 });

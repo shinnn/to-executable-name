@@ -7,7 +7,7 @@ module.exports = function toExecutableName(binName) {
 
   if (typeof binName !== 'string') {
     throw new TypeError(
-      binName +
+      String(binName) +
       ' is not a string. The first argument to to-executable-name must be a string.'
     );
   }
