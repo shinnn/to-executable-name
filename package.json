@@ -1,6 +1,6 @@
 {
   "name": "to-executable-name",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Append .exe to a given string if the program is running on a Windows environment",
   "repository": "shinnn/to-executable-name",
   "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
