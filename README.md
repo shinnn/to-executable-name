@@ -12,10 +12,10 @@ Append `.exe` to a given string if the program is running on a [Windows](http://
 const toExecutableName = require('to-executable-name');
 
 // On Windows
-toExecutableName('iojs'); //=> 'iojs.exe'
+toExecutableName('node'); //=> 'node.exe'
 
 // Otherwise
-toExecutableName('iojs'); //=> 'iojs'
+toExecutableName('node'); //=> 'node'
 ```
 
 ## Installation
@@ -32,10 +32,25 @@ npm install to-executable-name
 const toExecutableName = require('to-executable-name');
 ```
 
-### toExecutableName(*binName*)
+### toExecutableName(*binName* [, *option*])
 
-*binName*: [`String`](http://www.ecma-international.org/ecma-262/5.1/#sec-4.3.16)  
+*binName*: `String`  
+*option*: `Object`
 Return: `String`
+
+#### options.win32Ext
+
+Type: `String`  
+Default: `.exe`
+
+A file extension that will be appended to the string on Windows.
+
+```javascipt
+// On Windows
+
+toExecutableName('foo'); //=> 'foo.exe'
+toExecutableName('foo', {win32Ext: '.bat'}); //=> 'foo.bat'
+```
 
 ## License
 
