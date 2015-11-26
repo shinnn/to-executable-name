@@ -2,8 +2,8 @@
 
 [![NPM version](https://img.shields.io/npm/v/to-executable-name.svg)](https://www.npmjs.com/package/to-executable-name)
 [![Build Status](https://travis-ci.org/shinnn/to-executable-name.svg?branch=master)](https://travis-ci.org/shinnn/to-executable-name)
-[![Build status](https://ci.appveyor.com/api/projects/status/tesr30vmgccrb138?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/to-executable-name)
-[![Coverage Status](https://img.shields.io/coveralls/shinnn/to-executable-name.svg)](https://coveralls.io/r/shinnn/to-executable-name)
+[![Build status](https://ci.appveyor.com/api/projects/status/tesr30vmgccrb138/branch/master?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/to-executable-name/branch/master)
+[![Coverage Status](https://img.shields.io/coveralls/shinnn/to-executable-name.svg)](https://coveralls.io/github/shinnn/to-executable-name)
 [![devDependency Status](https://img.shields.io/david/dev/shinnn/to-executable-name.svg)](https://david-dm.org/shinnn/to-executable-name#info=devDependencies)
 
 Append `.exe` to a given string if the program is running on a [Windows](http://windows.microsoft.com/) environment
@@ -35,7 +35,7 @@ const toExecutableName = require('to-executable-name');
 ### toExecutableName(*binName* [, *option*])
 
 *binName*: `String`  
-*option*: `Object`
+*option*: `Object`  
 Return: `String`
 
 #### options.win32Ext
@@ -45,7 +45,7 @@ Default: `.exe`
 
 A file extension that will be appended to the string on Windows.
 
-```javascipt
+```javascript
 // On Windows
 
 toExecutableName('foo'); //=> 'foo.exe'
