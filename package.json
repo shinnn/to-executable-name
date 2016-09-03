@@ -5,7 +5,7 @@
   "repository": "shinnn/to-executable-name",
   "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
   "scripts": {
-    "pretest": "eslint --config @shinnn/node-legacy index.js test.js",
+    "pretest": "eslint --fix --config @shinnn/node-legacy index.js test.js",
     "test": "node --strong_mode --throw-deprecation --track-heap-objects test.js",
     "coverage": "node --strong_mode node_modules/.bin/istanbul cover test.js",
     "coveralls": "${npm_package_scripts_coverage} && istanbul-coveralls"
@@ -26,9 +26,9 @@
     "string"
   ],
   "devDependencies": {
-    "@shinnn/eslint-config-node-legacy": "^1.0.1",
-    "eslint": "^1.10.3",
-    "istanbul": "^0.4.1",
-    "tape": "^4.2.2"
+    "@shinnn/eslint-config-node-legacy": "^3.4.0",
+    "eslint": "^3.4.0",
+    "istanbul": "^0.4.5",
+    "tape": "^4.6.0"
   }
 }
