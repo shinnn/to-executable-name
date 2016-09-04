@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/shinnn/to-executable-name.svg?branch=master)](https://travis-ci.org/shinnn/to-executable-name)
 [![Build status](https://ci.appveyor.com/api/projects/status/tesr30vmgccrb138/branch/master?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/to-executable-name/branch/master)
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/to-executable-name.svg)](https://coveralls.io/github/shinnn/to-executable-name)
-[![devDependency Status](https://img.shields.io/david/dev/shinnn/to-executable-name.svg)](https://david-dm.org/shinnn/to-executable-name#info=devDependencies)
+[![devDependencies Status](https://david-dm.org/shinnn/to-executable-name/dev-status.svg)](https://david-dm.org/shinnn/to-executable-name?type=dev)
 
 Append `.exe` to a given string if the program is running on a [Windows](http://windows.microsoft.com/) environment
 
@@ -54,6 +54,6 @@ toExecutableName('foo', {win32Ext: '.bat'}); //=> 'foo.bat'
 
 ## License
 
-Copyright (c) 2015 [Shinnosuke Watanabe](https://github.com/shinnn)
+Copyright (c) 2015 - 2016 [Shinnosuke Watanabe](https://github.com/shinnn)
 
 Licensed under [the MIT License](./LICENSE).
