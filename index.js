@@ -4,6 +4,7 @@
 */
 module.exports = function toExecutableName(binName, options) {
   'use strict';
+
   options = options || {};
 
   if (typeof binName !== 'string') {
@@ -21,12 +22,14 @@ module.exports = function toExecutableName(binName, options) {
         ' (`.exe` by default).'
       );
     }
-  } else {
-    options.win32Ext = '.exe';
   }
 
   if (process.platform === 'win32') {
-    return binName + options.win32Ext;
+    if (options.win32Ext) {
+      return binName + options.win32Ext;
+    }
+
+    return binName + '.exe';
   }
 
   return binName;
