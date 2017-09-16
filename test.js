@@ -1,4 +1,4 @@
-'use strong';
+'use strict';
 
 const test = require('tape');
 const toExecutableName = require('.');
@@ -32,19 +32,19 @@ test('toExecutableName', t => {
 
   t.throws(
     () => toExecutableName(['bin']),
-    /TypeError.* is not a string\. The first argument to to-executable-name must be a string\./,
+    /TypeError.*Expected a binary name \(<string>\), but got a non-string value bin\./,
     'should throw a type error when it takes a non-string argument.'
   );
 
   t.throws(
     () => toExecutableName('bin', {win32Ext: 1}),
-    /TypeError.*1 is not a string\. `win32Ext` option must be a file extension for Windows executables/,
+    /TypeError.*Expected `win32Ext` option to be a file extension for Windows executables.*but got a non-string value 1\./,
     'should throw a type error when it takes a non-string argument.'
   );
 
   t.throws(
     () => toExecutableName(),
-    /TypeError.* is not a string\. The first argument to to-executable-name must be a string\./,
+    /TypeError.*Expected a binary name \(<string>\), but got a non-string value undefined\./,
     'should throw a type error when it takes no arguments.'
   );
 });

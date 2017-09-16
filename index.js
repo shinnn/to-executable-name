@@ -1,35 +1,26 @@
-/*!
- * to-executable-name | MIT (c) Shinnosuke Watanabe
- * https://github.com/shinnn/to-executable-name
-*/
-module.exports = function toExecutableName(binName, options) {
-  'use strict';
+'use strict';
 
-  options = options || {};
+module.exports = function toExecutableName(binName, options) {
+  options = Object.assign({}, options);
 
   if (typeof binName !== 'string') {
-    throw new TypeError(
-      String(binName) +
-      ' is not a string. The first argument to to-executable-name must be a string.'
-    );
+    throw new TypeError(`Expected a binary name (<string>), but got a non-string value ${binName}.`);
   }
 
   if (options.win32Ext) {
     if (typeof options.win32Ext !== 'string') {
       throw new TypeError(
-        String(options.win32Ext) +
-        ' is not a string. `win32Ext` option must be a file extension for Windows executables' +
-        ' (`.exe` by default).'
+        `Expected \`win32Ext\` option to be a file extension for Windows executables (<string>, \`.exe\` by default), but got a non-string value ${
+          options.win32Ext
+        }.`
       );
     }
+  } else {
+    options.win32Ext = '.exe';
   }
 
   if (process.platform === 'win32') {
-    if (options.win32Ext) {
-      return binName + options.win32Ext;
-    }
-
-    return binName + '.exe';
+    return `${binName}${options.win32Ext}`;
   }
 
   return binName;
