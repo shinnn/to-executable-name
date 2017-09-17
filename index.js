@@ -9,11 +9,9 @@ module.exports = function toExecutableName(binName, options) {
 
   if (options.win32Ext) {
     if (typeof options.win32Ext !== 'string') {
-      throw new TypeError(
-        `Expected \`win32Ext\` option to be a file extension for Windows executables (<string>, \`.exe\` by default), but got a non-string value ${
-          options.win32Ext
-        }.`
-      );
+      throw new TypeError(`Expected \`win32Ext\` option to be a file extension for Windows executables (<string>, \`.exe\` by default), but got a non-string value ${
+        options.win32Ext
+      }.`);
     }
   } else {
     options.win32Ext = '.exe';
