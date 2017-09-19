@@ -6,4 +6,4 @@ install:
   - ps: Install-Product node Stable x64
   - npm install
 build: off
-test_script: node --throw-deprecation --track-heap-objects test.js
+test_script: node --throw-deprecation test.js
