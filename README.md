@@ -1,10 +1,9 @@
 # to-executable-name
 
-[![NPM version](https://img.shields.io/npm/v/to-executable-name.svg)](https://www.npmjs.com/package/to-executable-name)
+[![npm version](https://img.shields.io/npm/v/to-executable-name.svg)](https://www.npmjs.com/package/to-executable-name)
 [![Build Status](https://travis-ci.org/shinnn/to-executable-name.svg?branch=master)](https://travis-ci.org/shinnn/to-executable-name)
 [![Build status](https://ci.appveyor.com/api/projects/status/tesr30vmgccrb138/branch/master?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/to-executable-name/branch/master)
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/to-executable-name.svg)](https://coveralls.io/github/shinnn/to-executable-name)
-[![devDependencies Status](https://david-dm.org/shinnn/to-executable-name/dev-status.svg)](https://david-dm.org/shinnn/to-executable-name?type=dev)
 
 Append `.exe` to a given string if the program is running on a [Windows](http://windows.microsoft.com/) environment
 

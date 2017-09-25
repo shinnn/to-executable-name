@@ -23,6 +23,9 @@
     "executable",
     "string"
   ],
+  "dependencies": {
+    "is-plain-obj": "^1.1.0"
+  },
   "devDependencies": {
     "@shinnn/eslint-config-node": "^4.0.2",
     "eslint": "^4.7.2",
