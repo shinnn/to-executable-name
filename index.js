@@ -2,6 +2,8 @@
 
 const isPlainObj = require('is-plain-obj');
 
+const OPTION_ERROR = 'Expected `win32Ext` option to be a file extension for Windows executables (<string>, `.exe` by default)';
+
 module.exports = function toExecutableName(...args) {
   const argLen = args.length;
 
@@ -11,29 +13,34 @@ module.exports = function toExecutableName(...args) {
     } arguments instead.`);
   }
 
-  if (argLen === 2 && !isPlainObj(args[1])) {
-    throw new TypeError(`Expected a plain object to set to-executable-name options, but got ${
-      args[1]
-    }.`);
-  }
-
   const [binName] = args;
-  const options = Object.assign({
-    win32Ext: '.exe'
-  }, args[1]);
 
   if (typeof binName !== 'string') {
     throw new TypeError(`Expected a binary name (<string>), but got a non-string value ${binName}.`);
   }
 
-  if (typeof options.win32Ext !== 'string') {
-    throw new TypeError(`Expected \`win32Ext\` option to be a file extension for Windows executables (<string>, \`.exe\` by default), but got a non-string value ${
-      options.win32Ext
-    }.`);
+  if (argLen === 2) {
+    if (!isPlainObj(args[1])) {
+      throw new TypeError(`Expected a plain object to set to-executable-name options, but got ${
+        args[1]
+      }.`);
+    }
+
+    const {win32Ext} = args[1];
+
+    if (typeof win32Ext !== 'string') {
+      throw new TypeError(`${OPTION_ERROR}, but got a non-string value ${args[1].win32Ext}.`);
+    }
+
+    if (win32Ext.length === 0) {
+      throw new Error(`${
+        OPTION_ERROR
+      }, but got '' (empty string). If you don't want to append any file extension to the string, there is no need to use to-executable-name.`);
+    }
   }
 
   if (process.platform === 'win32') {
-    return `${binName}${options.win32Ext}`;
+    return `${binName}${args[1] && args[1].win32Ext ? args[1].win32Ext : '.exe'}`;
   }
 
   return binName;
