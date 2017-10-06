@@ -53,6 +53,4 @@ toExecutableName('foo', {win32Ext: '.bat'}); //=> 'foo.bat'
 
 ## License
 
-Copyright (c) 2015 - 2017 [Shinnosuke Watanabe](https://github.com/shinnn)
-
-Licensed under [the MIT License](./LICENSE).
+[ISC License](./LICENSE) © 2017 Shinnosuke Watanabe
