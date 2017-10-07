@@ -5,7 +5,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/tesr30vmgccrb138/branch/master?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/to-executable-name/branch/master)
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/to-executable-name.svg)](https://coveralls.io/github/shinnn/to-executable-name)
 
-Append `.exe` to a given string if the program is running on a [Windows](http://windows.microsoft.com/) environment
+Append `.exe` to a given string if the program is running on a [Windows](https://www.microsoft.com/windows) environment
 
 ```javascript
 const toExecutableName = require('to-executable-name');
@@ -19,7 +19,7 @@ toExecutableName('node'); //=> 'node'
 
 ## Installation
 
-[Use npm.](https://docs.npmjs.com/cli/install)
+[Use](https://docs.npmjs.com/cli/install) [npm](https://docs.npmjs.com/getting-started/what-is-npm).
 
 ```
 npm install to-executable-name
@@ -33,13 +33,13 @@ const toExecutableName = require('to-executable-name');
 
 ### toExecutableName(*binName* [, *option*])
 
-*binName*: `String`  
+*binName*: `string`  
 *option*: `Object`  
 Return: `String`
 
 #### options.win32Ext
 
-Type: `String`  
+Type: `string`  
 Default: `.exe`
 
 A file extension that will be appended to the string on Windows.
