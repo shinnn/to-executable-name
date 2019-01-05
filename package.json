@@ -1,38 +1,42 @@
 {
-  "name": "to-executable-name",
-  "version": "2.0.0",
-  "description": "Append .exe to a given string if the program is running on a Windows environment",
-  "repository": "shinnn/to-executable-name",
-  "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
-  "scripts": {
-    "pretest": "eslint --fix --format=codeframe index.js test.js",
-    "test": "nyc --reporter=text --reporter=html node --throw-deprecation test.js"
-  },
-  "license": "ISC",
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "append",
-    "name",
-    "filaname",
-    "environment",
-    "windows",
-    "exe",
-    "bin",
-    "executable",
-    "string"
-  ],
-  "dependencies": {
-    "is-plain-obj": "^1.1.0"
-  },
-  "devDependencies": {
-    "@shinnn/eslint-config-node": "^4.0.2",
-    "eslint": "^4.8.0",
-    "nyc": "^11.2.1",
-    "tape": "^4.8.0"
-  },
-  "eslintConfig": {
-    "extends": "@shinnn/node"
-  }
+	"name": "to-executable-name",
+	"version": "2.0.0",
+	"description": "Append .exe to a given string if the program is running on a Windows environment",
+	"repository": "shinnn/to-executable-name",
+	"author": "Shinnosuke Watanabe (https://github.com/shinnn)",
+	"license": "ISC",
+	"scripts": {
+		"pretest": "eslint .",
+		"test": "nyc node test.js"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"append",
+		"name",
+		"filaname",
+		"environment",
+		"windows",
+		"exe",
+		"bin",
+		"executable",
+		"string"
+	],
+	"dependencies": {
+		"is-plain-obj": "^1.1.0"
+	},
+	"devDependencies": {
+		"@shinnn/eslint-config": "^6.8.9",
+		"eslint": "^5.12.0",
+		"nyc": "^13.1.0",
+		"nyc-config-common": "^1.0.1",
+		"tape": "^4.9.2"
+	},
+	"eslintConfig": {
+		"extends": "@shinnn"
+	},
+	"nyc": {
+		"extends": "nyc-config-common"
+	}
 }

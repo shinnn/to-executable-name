@@ -1,7 +1,7 @@
 # to-executable-name
 
 [![npm version](https://img.shields.io/npm/v/to-executable-name.svg)](https://www.npmjs.com/package/to-executable-name)
-[![Build Status](https://travis-ci.org/shinnn/to-executable-name.svg?branch=master)](https://travis-ci.org/shinnn/to-executable-name)
+[![Build Status](https://travis-ci.com/shinnn/to-executable-name.svg?branch=master)](https://travis-ci.com/shinnn/to-executable-name)
 [![Build status](https://ci.appveyor.com/api/projects/status/tesr30vmgccrb138/branch/master?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/to-executable-name/branch/master)
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/to-executable-name.svg)](https://coveralls.io/github/shinnn/to-executable-name)
 
@@ -19,7 +19,7 @@ toExecutableName('node'); //=> 'node'
 
 ## Installation
 
-[Use](https://docs.npmjs.com/cli/install) [npm](https://docs.npmjs.com/getting-started/what-is-npm).
+[Use](https://docs.npmjs.com/cli/install) [npm](https://docs.npmjs.com/about-npm/).
 
 ```
 npm install to-executable-name
@@ -35,7 +35,7 @@ const toExecutableName = require('to-executable-name');
 
 *binName*: `string`  
 *option*: `Object`  
-Return: `String`
+Return: `string`
 
 #### options.win32Ext
 
@@ -53,4 +53,4 @@ toExecutableName('foo', {win32Ext: '.bat'}); //=> 'foo.bat'
 
 ## License
 
-[ISC License](./LICENSE) © 2017 Shinnosuke Watanabe
+[ISC License](./LICENSE) © 2017 - 2019 Shinnosuke Watanabe
